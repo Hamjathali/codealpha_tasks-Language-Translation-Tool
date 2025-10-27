@@ -21,13 +21,15 @@ translator = Translator()
 # Input section
 # -------------------------------
 text = st.text_area("Enter text to translate", height=150)
-
+st.write("") 
+st.write("")
 col1, col2 = st.columns(2)
 with col1:
     source_lang = st.selectbox("Select Source Language", options=list(LANGUAGES.values()), index=21)
 with col2:
     target_lang = st.selectbox("Select Target Language", options=list(LANGUAGES.values()), index=38)
 
+st.write("")
 # -------------------------------
 # Translate Button
 # -------------------------------
@@ -50,6 +52,7 @@ if st.button("🔁 Translate"):
         st.warning("Please enter text to translate.")
 
 
+st.write("")
 # -------------------------------
 # Display stored translation (always visible)
 # -------------------------------
@@ -102,35 +105,49 @@ if 'translated_text' in st.session_state:
             except Exception as e:
                 st.error(f"Text-to-Speech Error: {str(e)}")
                 
-      
+  
 # -------------------------------
 # Footer (Always at the Bottom)
 # -------------------------------
-st.markdown("---")
+
+# st.markdown(
+#     """
+#     <style>
+#         .footer {
+#             position: fixed;
+#             bottom: 0;
+#             left: 0;
+#             width: 100%;
+#             background-color: transparent;
+#             text-align: left; /* Aligns content to the beginning of the line */
+#             padding: 10px 40px; /* Adds a bit of spacing from the left edge */
+#             font-size: 22px;
+#             color: #d1d1d1;
+#             line-height: 1.5;
+#         }
+#     </style>
+#     <div class="footer">
+#         <p>👨‍💻 Developed by: <b>Hamjathali I</b></p>
+#         <p>💡 Idea: <i>Language Translation Tool
+#         <p>🛠️ Tech Stack: Python, Streamlit, Googletrans API, gTTS, pyttsx3, Pyperclip <p>
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+# )
+st.write("") 
+st.write("")
+st.write("") 
+st.write("")
 st.markdown(
-    """
-    <style>
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: transparent;
-            text-align: left; /* Aligns content to the beginning of the line */
-            padding: 10px 40px; /* Adds a bit of spacing from the left edge */
-            font-size: 22px;
-            color: #d1d1d1;
-            line-height: 1.5;
-        }
-    </style>
-    <div class="footer">
-        <p>👨‍💻 Developed by: <b>Hamjathali I</b></p>
-        <p>💡 Idea: <i>Language Translation Tool
-        <p>🛠️ Tech Stack: Python, Streamlit, Googletrans API, gTTS, pyttsx3, Pyperclip <p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+            """
+            <p style="font-size:20px; margin-top:0;">
+                👨‍💻 Developed by: <b>Hamjathali I</b>
+            </p>
+            <p style="font-size:20px;">💡 Idea: <i>Language Translation Tool</i></p>
+            <p style="font-size:20px;">🛠️ Tech Stack: Python, Streamlit, Googletrans API, gTTS, pyttsx3, Pyperclip</p>
+            """,
+            unsafe_allow_html=True
+        )
 
 
 
