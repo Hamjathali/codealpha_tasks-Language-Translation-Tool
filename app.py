@@ -92,7 +92,7 @@ if 'translated_text' in st.session_state:
 
                     with open(temp_path, "rb") as audio_file:
                         st.audio(audio_file.read(), format="audio/mp3")
-                    st.success("🔊 Audio generated using Google TTS (online)")
+                    st.success("🔊 Audio generated using Google TTS")
                 else:
                     # --- Offline mode (pyttsx3) ---
                     engine = pyttsx3.init()
