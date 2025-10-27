@@ -102,8 +102,7 @@ if 'translated_text' in st.session_state:
             except Exception as e:
                 st.error(f"Text-to-Speech Error: {str(e)}")
                 
-st.write()     
-st.write()       
+      
 # -------------------------------
 # Footer (Always at the Bottom)
 # -------------------------------
