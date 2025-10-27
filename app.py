@@ -101,3 +101,38 @@ if 'translated_text' in st.session_state:
                     st.success("🗣️ Spoken using Offline TTS (pyttsx3)")
             except Exception as e:
                 st.error(f"Text-to-Speech Error: {str(e)}")
+                
+st.write()     
+st.write()       
+# -------------------------------
+# Footer (Always at the Bottom)
+# -------------------------------
+st.markdown("---")
+st.markdown(
+    """
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            text-align: left; /* Aligns content to the beginning of the line */
+            padding: 10px 40px; /* Adds a bit of spacing from the left edge */
+            font-size: 24px;
+            color: #d1d1d1;
+            line-height: 1.5;
+        }
+    </style>
+    <div class="footer">
+        <p>👨‍💻 Developed by: <b>Hamjathali I</b></p>
+        <p>💡 Idea: <i>Language Translation Tool
+        <p>🛠️ Tech Stack: Python, Streamlit, Googletrans API, gTTS, pyttsx3, Pyperclip <p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
