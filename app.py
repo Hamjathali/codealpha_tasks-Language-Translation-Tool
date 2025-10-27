@@ -119,7 +119,7 @@ st.markdown(
             background-color: transparent;
             text-align: left; /* Aligns content to the beginning of the line */
             padding: 10px 40px; /* Adds a bit of spacing from the left edge */
-            font-size: 24px;
+            font-size: 22px;
             color: #d1d1d1;
             line-height: 1.5;
         }
